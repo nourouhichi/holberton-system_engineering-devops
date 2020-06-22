@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#advanced task
+trap "echo To infinity and beyond" SIGTERM
+trap "echo Y U no love me?!" SIGINT
+echo $$ > "/var/run/holbertonscript.pid"
+while true
+do
+echo To infinity and beyond
+sleep 2
+done
+trap "rm /var/run/holbertonscript.pid" SIGQUIT SIGTERM
