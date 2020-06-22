@@ -9,4 +9,4 @@ do
 echo To infinity and beyond
 sleep 2
 done
-trap "rm $file; exit" SIGQUIT
+trap "rm $f; exit" SIGQUIT
