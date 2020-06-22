@@ -2,7 +2,7 @@
 #advanced task
 f='/var/run/holbertonscript.pid'
 echo "$$" > $f
-trap 'I "hate the kill command"; sudo rm $f' 15
+trap 'echo "I hate the kill command"; sudo rm $f' 15
 trap 'echo Y U no love me?!' SIGINT
 trap 'sudo rm $f' SIGQUIT
 while true
