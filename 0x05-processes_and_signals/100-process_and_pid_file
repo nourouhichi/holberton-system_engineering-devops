@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 #advanced task
-f=/var/run/holbertonscript.pid
+sudo 
+f="/var/run/holbertonscript.pid"
 trap "echo To infinity and beyond" SIGTERM
 trap "echo Y U no love me?!" SIGINT
-echo $$ > "$f"
+echo $$ > $f
 while true
 do
 echo To infinity and beyond
 sleep 2
 done
-trap "rm $f; exit" SIGQUIT
+trap "sudo rm $f" SIGQUIT
