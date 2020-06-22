@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 #advanced task
-sudo 
 f="/var/run/holbertonscript.pid"
 trap "echo To infinity and beyond" SIGTERM
 trap "echo Y U no love me?!" SIGINT
