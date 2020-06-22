@@ -9,7 +9,7 @@ case "$1" in
 		;;
 	stop)
 		pkill -f manage_my_process &
-		rm $file $
+		rm $file &
 		echo "manage_my_process stopped"
 		;;
 	restart)
