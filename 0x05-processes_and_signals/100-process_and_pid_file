@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 #advanced task
 f='/var/run/holbertonscript.pid'
-trap 'echo To infinity and beyond; sudo rm $f' SIGTERM
+echo "$$" > $f
+trap 'I "hate the kill command"; sudo rm $f' 15
 trap 'echo Y U no love me?!' SIGINT
-echo $$ > $f
+trap 'sudo rm $f' SIGQUIT
 while true
 do
 echo To infinity and beyond
-trap 'sudo rm $f' SIGQUIT
 done
