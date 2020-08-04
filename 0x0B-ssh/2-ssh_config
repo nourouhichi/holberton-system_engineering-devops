@@ -1,0 +1,3 @@
+IdentityFile ~/.ssh/holberton
+ForwardAgent yes
+ForwardX11 yes
