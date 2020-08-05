@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#insatlling nginx on the server
+sudo apt-get -y install nginx
+sudo ufw allow http
+echo "Holberton School" > /var/www/html/index.html
