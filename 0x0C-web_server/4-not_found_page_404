@@ -3,13 +3,12 @@
 sudo apt-get -y update
 sudo apt-get -y install nginx
 sudo ufw allow 80/tcp
-sudo chown -R "$USER":"$USER" /etc/nginx/*
-sudo chmod -R 755 /etc/nginx/sites-available/default
+sudo chmod a+w /var/www/html/index.nginx-debian.html
+echo "Holberton School" > /var/www/html/index.nginx-debian.html
 sudo touch /usr/share/nginx/html/custom_404.html
 sudo chmod a+w /usr/share/nginx/html/custom_404.html
 echo "Ceci n'est pas une page" > /usr/share/nginx/html/custom_404.html
-sudo chmod a+w /var/www/html/index.nginx-debian.html
-echo "Holberton School" > /var/www/html/index.nginx-debian.html
+sudo chmod a+w /etc/nginx/sites-available/default
 printf %s "server {
         listen 80 default_server;
         error_page 404 /custom_404.html;
