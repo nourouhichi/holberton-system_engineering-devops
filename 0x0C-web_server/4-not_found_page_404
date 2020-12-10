@@ -5,10 +5,10 @@ sudo apt-get -y install nginx
 sudo ufw allow 80/tcp
 sudo chown -R "$USER":"$USER" /etc/nginx/*
 sudo chmod -R 755 /etc/nginx/sites-available/default
-sudo touch /var/www/html/custom_404.html
-sudo chmod 777 /usr/share/nginx/html/custom_404.html
+sudo touch /usr/share/nginx/html/custom_404.html
+sudo chmod a+w /usr/share/nginx/html/custom_404.html
 echo "Ceci n'est pas une page" > /usr/share/nginx/html/custom_404.html
-sudo chmod 777 /var/www/html/*
+sudo chmod a+w /var/www/html/index.nginx-debian.html
 echo "Holberton School" > /var/www/html/index.nginx-debian.html
 printf %s "server {
         listen 80 default_server;
